@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction;
+using TMPro;
 
 
 public class Pistol : MonoBehaviour
@@ -14,41 +15,46 @@ public class Pistol : MonoBehaviour
     [SerializeField] float fireSpeed;
     [SerializeField] int bullets;
     [SerializeField] int maxBullets;
-    [SerializeField] GameObject ReloadUI;
+    [SerializeField] GameObject reloadUI;
+    [SerializeField] TMP_Text bulletCounter;
 
     [SerializeField] InputActionProperty reloadButton;
 
     private void Start()
     {
-        maxBullets = 7;
+        bulletCounter.text = "Bullets: " + bullets;
         bullets = maxBullets;
     }
     private void Update()
     {
-        if(reloadButton.action.ReadValue<float>() > 0.1f) 
+        if(reloadButton.action.ReadValue<float>() > 0.5) 
         {
             Reload();
         }
     }
 
-    public void Reload()
+
+    IEnumerable Reload()
     {
+        yield return new WaitForSeconds(3);
         bullets = maxBullets;
     }
+   
     public void FireBullet()
     {
         if (bullets > 0)
         {
-            ReloadUI.SetActive(false);
+            reloadUI.SetActive(false);
             GameObject spawnedBullet = Instantiate(bullet, firePoint.position, firePoint.rotation);
             spawnedBullet.GetComponent<Rigidbody>().velocity = firePoint.forward * fireSpeed;
             Destroy(spawnedBullet, 3f);
             bullets--;
+            bulletCounter.text = "Bullets: " + bullets;
         }
         
         if(bullets <= 0) 
         {
-            ReloadUI.SetActive(true);
+            reloadUI.SetActive(true);
         }
         
     }
