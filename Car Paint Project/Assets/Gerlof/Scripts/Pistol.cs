@@ -27,9 +27,9 @@ public class Pistol : MonoBehaviour
     }
     private void Update()
     {
-        if(reloadButton.action.ReadValue<float>() > 0.5) 
+        if(reloadButton.action.ReadValue<float>() > 0.1) 
         {
-            Reload();
+            DoReload();
         }
     }
 
@@ -37,22 +37,27 @@ public class Pistol : MonoBehaviour
     IEnumerable Reload()
     {
         yield return new WaitForSeconds(3);
+        DoReload();
+    }
+
+    void DoReload()
+    {
+        reloadUI.SetActive(false);
         bullets = maxBullets;
+        bulletCounter.text = "Bullets: " + bullets;
     }
    
     public void FireBullet()
     {
         if (bullets > 0)
-        {
-            reloadUI.SetActive(false);
+        {          
             GameObject spawnedBullet = Instantiate(bullet, firePoint.position, firePoint.rotation);
             spawnedBullet.GetComponent<Rigidbody>().velocity = firePoint.forward * fireSpeed;
             Destroy(spawnedBullet, 3f);
             bullets--;
             bulletCounter.text = "Bullets: " + bullets;
-        }
-        
-        if(bullets <= 0) 
+        }        
+        else 
         {
             reloadUI.SetActive(true);
         }
