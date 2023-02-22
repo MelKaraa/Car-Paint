@@ -8,8 +8,8 @@ public class ActivateGrabRay : MonoBehaviour
     [SerializeField] GameObject leftGrabRay;
     [SerializeField] GameObject rightGrabRay;
 
-    [SerializeField] XRDirectInteractor leftDirectGrab;
-    [SerializeField] XRDirectInteractor rightDirectGrab;
+    [SerializeField] XRDirectInteractorHandCheck leftDirectGrab;
+    [SerializeField] XRDirectInteractorHandCheck rightDirectGrab;
     // Start is called before the first frame update
     void Start()
     {
