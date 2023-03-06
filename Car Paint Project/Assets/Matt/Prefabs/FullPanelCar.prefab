@@ -328,7 +328,7 @@ GameObject:
   - component: {fileID: 3133271255200808092}
   m_Layer: 0
   m_Name: MettalicFrontStrip L
-  m_TagString: Car Part
+  m_TagString: Car Part Left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -701,7 +701,7 @@ GameObject:
   - component: {fileID: 4452316223831737637}
   m_Layer: 0
   m_Name: FrontSideWindow R
-  m_TagString: Car Part
+  m_TagString: Car Part Right
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1349,7 +1349,7 @@ GameObject:
   - component: {fileID: 2569062202611716282}
   m_Layer: 0
   m_Name: Door L
-  m_TagString: Car Part
+  m_TagString: Car Part Left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1629,7 +1629,7 @@ GameObject:
   - component: {fileID: 7270473994674033159}
   m_Layer: 0
   m_Name: MettalicFrontStrip R
-  m_TagString: Car Part
+  m_TagString: Car Part Right
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2655,7 +2655,7 @@ GameObject:
   - component: {fileID: 5043152102300834596}
   m_Layer: 0
   m_Name: RearFender L
-  m_TagString: Car Part
+  m_TagString: Car Part Left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3868,7 +3868,7 @@ GameObject:
   - component: {fileID: 4073206078394801663}
   m_Layer: 0
   m_Name: FrontLightL
-  m_TagString: Car Part
+  m_TagString: Car Part Left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4364,7 +4364,7 @@ GameObject:
   - component: {fileID: 921082746855114071}
   m_Layer: 0
   m_Name: FrontFender R
-  m_TagString: Car Part
+  m_TagString: Car Part Right
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4986,7 +4986,7 @@ GameObject:
   - component: {fileID: 305814482129462068}
   m_Layer: 0
   m_Name: FrontFender L
-  m_TagString: Car Part
+  m_TagString: Car Part Left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5297,7 +5297,7 @@ GameObject:
   - component: {fileID: 627198567837273417}
   m_Layer: 0
   m_Name: Door R
-  m_TagString: Car Part
+  m_TagString: Car Part Right
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5608,7 +5608,7 @@ GameObject:
   - component: {fileID: 5064305379329731028}
   m_Layer: 0
   m_Name: RearSideWindowR
-  m_TagString: Car Part
+  m_TagString: Car Part Right
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6479,7 +6479,7 @@ GameObject:
   - component: {fileID: 1519812067639612448}
   m_Layer: 0
   m_Name: RearFender R
-  m_TagString: Car Part
+  m_TagString: Car Part Right
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7070,7 +7070,7 @@ GameObject:
   - component: {fileID: 3212274085158288564}
   m_Layer: 0
   m_Name: FrontSideWindow L
-  m_TagString: Car Part
+  m_TagString: Car Part Left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7381,7 +7381,7 @@ GameObject:
   - component: {fileID: 1144294217774559382}
   m_Layer: 0
   m_Name: MettalicRearStrip R
-  m_TagString: Car Part
+  m_TagString: Car Part Right
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7661,7 +7661,7 @@ GameObject:
   - component: {fileID: 3360278997161449957}
   m_Layer: 0
   m_Name: MettalicRearStrip L
-  m_TagString: Car Part
+  m_TagString: Car Part Left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
