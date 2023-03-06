@@ -14218,6 +14218,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 83140635831197620, guid: ee57190e53ca1c340bcd90b47fadebd5,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.755691
+      objectReference: {fileID: 0}
+    - target: {fileID: 83140635831197620, guid: ee57190e53ca1c340bcd90b47fadebd5,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.755691
+      objectReference: {fileID: 0}
+    - target: {fileID: 83140635831197620, guid: ee57190e53ca1c340bcd90b47fadebd5,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.755691
+      objectReference: {fileID: 0}
+    - target: {fileID: 83140635831197620, guid: ee57190e53ca1c340bcd90b47fadebd5,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.909
       objectReference: {fileID: 0}
@@ -14266,80 +14281,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 137998730214460322, guid: ee57190e53ca1c340bcd90b47fadebd5,
-        type: 3}
-      propertyPath: m_TagString
-      value: Car Part Left
-      objectReference: {fileID: 0}
-    - target: {fileID: 570291648037133852, guid: ee57190e53ca1c340bcd90b47fadebd5,
-        type: 3}
-      propertyPath: m_TagString
-      value: Car Part Right
-      objectReference: {fileID: 0}
     - target: {fileID: 751132860406957326, guid: ee57190e53ca1c340bcd90b47fadebd5,
         type: 3}
       propertyPath: m_Name
       value: FullPanelCar
-      objectReference: {fileID: 0}
-    - target: {fileID: 1423635378375898473, guid: ee57190e53ca1c340bcd90b47fadebd5,
-        type: 3}
-      propertyPath: m_TagString
-      value: Car Part Left
-      objectReference: {fileID: 0}
-    - target: {fileID: 1460717309528748070, guid: ee57190e53ca1c340bcd90b47fadebd5,
-        type: 3}
-      propertyPath: m_TagString
-      value: Car Part Right
-      objectReference: {fileID: 0}
-    - target: {fileID: 3286584542729839022, guid: ee57190e53ca1c340bcd90b47fadebd5,
-        type: 3}
-      propertyPath: m_TagString
-      value: Car Part Left
-      objectReference: {fileID: 0}
-    - target: {fileID: 3969687302437028801, guid: ee57190e53ca1c340bcd90b47fadebd5,
-        type: 3}
-      propertyPath: m_TagString
-      value: Car Part Left
-      objectReference: {fileID: 0}
-    - target: {fileID: 4978040756533660950, guid: ee57190e53ca1c340bcd90b47fadebd5,
-        type: 3}
-      propertyPath: m_TagString
-      value: Car Part Right
-      objectReference: {fileID: 0}
-    - target: {fileID: 5455704135935747784, guid: ee57190e53ca1c340bcd90b47fadebd5,
-        type: 3}
-      propertyPath: m_TagString
-      value: Car Part Left
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209127335454822806, guid: ee57190e53ca1c340bcd90b47fadebd5,
-        type: 3}
-      propertyPath: m_TagString
-      value: Car Part Right
-      objectReference: {fileID: 0}
-    - target: {fileID: 6853272957085978034, guid: ee57190e53ca1c340bcd90b47fadebd5,
-        type: 3}
-      propertyPath: m_TagString
-      value: Car Part Right
-      objectReference: {fileID: 0}
-    - target: {fileID: 7829147397262836312, guid: ee57190e53ca1c340bcd90b47fadebd5,
-        type: 3}
-      propertyPath: m_TagString
-      value: Car Part Right
-      objectReference: {fileID: 0}
-    - target: {fileID: 8694758297659617216, guid: ee57190e53ca1c340bcd90b47fadebd5,
-        type: 3}
-      propertyPath: m_TagString
-      value: Car Part Left
-      objectReference: {fileID: 0}
-    - target: {fileID: 8957200356350273586, guid: ee57190e53ca1c340bcd90b47fadebd5,
-        type: 3}
-      propertyPath: m_TagString
-      value: Car Part Right
-      objectReference: {fileID: 0}
-    - target: {fileID: 8974436521173650732, guid: ee57190e53ca1c340bcd90b47fadebd5,
-        type: 3}
-      propertyPath: m_TagString
-      value: Car Part Left
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee57190e53ca1c340bcd90b47fadebd5, type: 3}
