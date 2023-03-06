@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Left Hand
   - Right Hand
+  - Car Part
+  - Car Part Left
+  - Car Part Right
+  - Car Part Front
+  - Car Part Rear
   layers:
   - Default
   - TransparentFX
