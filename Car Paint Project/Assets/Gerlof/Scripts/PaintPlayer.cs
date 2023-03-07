@@ -8,7 +8,7 @@ public class PaintPlayer : MonoBehaviour
     [SerializeField] ParticleSystem paintParticle;
     [SerializeField] float ammoAddMultiplier;
     [SerializeField] float ammoUseMultiplier;
-    bool spray;
+    [SerializeField] bool spray;
 
     [SerializeField] TMP_Text ammoTxt;
 
@@ -26,7 +26,7 @@ public class PaintPlayer : MonoBehaviour
         }
         if (spray)
         {
-            paintParticle.Play();
+            paintParticle.Emit(10);
             GameManager.Money -= ammoUseMultiplier * Time.deltaTime;
             ammoTxt.text = "Money: " + GameManager.Money.ToString("F0");
         }

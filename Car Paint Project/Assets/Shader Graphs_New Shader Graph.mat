@@ -56,5 +56,5 @@ Material:
     - _Basecolor: {r: 1, g: 0.091103174, b: 0, a: 1}
     - _Color: {r: 1, g: 0, b: 0, a: 0}
     - _Color_1: {r: 1, g: 0, b: 0, a: 0}
-    - _Paintcolor: {r: 0, g: 0.04503846, b: 1, a: 1}
+    - _Paintcolor: {r: 0.14278221, g: 0, b: 1, a: 1}
   m_BuildTextureStacks: []
