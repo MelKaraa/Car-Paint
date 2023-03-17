@@ -8,7 +8,7 @@ public class PaintPlayer : MonoBehaviour
     [SerializeField] ParticleSystem paintParticle;
     [SerializeField] float ammoAddMultiplier;
     [SerializeField] float ammoUseMultiplier;
-    [SerializeField] bool spray;
+    public static bool spray;
 
     [SerializeField] TMP_Text ammoTxt;
 
