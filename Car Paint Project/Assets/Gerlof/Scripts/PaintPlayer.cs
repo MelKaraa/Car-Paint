@@ -26,7 +26,7 @@ public class PaintPlayer : MonoBehaviour
         }
         if (spray)
         {
-            paintParticle.Emit(10);
+            paintParticle.Emit(300);
             GameManager.Money -= ammoUseMultiplier * Time.deltaTime;
             ammoTxt.text = "Money: " + GameManager.Money.ToString("F0");
         }

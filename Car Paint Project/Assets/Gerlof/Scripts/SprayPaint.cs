@@ -8,25 +8,36 @@ public class SprayPaint : MonoBehaviour
 
     public Mesh curMesh;
     
-    private int colorIndex;
+    [SerializeField]private int colorIndex;
     private Vector3[] verts;
-
+    RaycastHit hit;
     void Start()
     {
-        verts = curMesh.vertices;
+        
     }
 
     private void Update()
     {
-        RaycastHit hit;
+        
         Ray ray = new Ray(transform.position, transform.forward);
         if(Physics.Raycast(ray, out hit))
         {
-            
-            if (PaintPlayer.spray)
+          
+            if (hit.transform.GetComponent<MeshFilter>().GetComponent<Mesh>())
             {
-                PaintCar(curMesh, hit.triangleIndex, colors[colorIndex]);
+                curMesh = hit.transform.GetComponent<MeshFilter>().GetComponent<Mesh>();
+                verts = curMesh.vertices;
+                if (PaintPlayer.spray)
+                {
+                    PaintCar(curMesh, hit.triangleIndex, colors[colorIndex]);
+                }
             }
+            else
+            {
+                Debug.Log("No mesh found");
+                curMesh = hit.transform.GetComponent<MeshFilter>().GetComponent<Mesh>();
+            }
+            
         }
     }
 
@@ -71,5 +82,10 @@ public class SprayPaint : MonoBehaviour
             }
         }
         mesh.colors = colors;
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(transform.position, hit.point);
     }
 }
