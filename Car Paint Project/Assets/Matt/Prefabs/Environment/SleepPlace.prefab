@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 2359810811020312688}
   - component: {fileID: 1661934894759088085}
   - component: {fileID: 3527611201781627679}
+  - component: {fileID: 3261236153971671103}
+  - component: {fileID: 8167831233536846482}
+  - component: {fileID: 1316847831746328613}
   m_Layer: 0
   m_Name: SleepPlace
   m_TagString: Untagged
@@ -83,3 +86,42 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3261236153971671103
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3167274921555286730}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 0.29, z: 4}
+  m_Center: {x: 0, y: -0.01, z: 0}
+--- !u!65 &8167831233536846482
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3167274921555286730}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.14, y: 0.6, z: 0.09}
+  m_Center: {x: -0.94, y: 0.47, z: 1.95}
+--- !u!65 &1316847831746328613
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3167274921555286730}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09, y: 0.6, z: 3.87}
+  m_Center: {x: -1.93, y: 0.47, z: -0.07}

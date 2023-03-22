@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 507043205122589428}
   - component: {fileID: 3505694481302457681}
   - component: {fileID: 1675987530090314139}
+  - component: {fileID: 2593085327533193103}
   m_Layer: 0
   m_Name: BrickWall
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2593085327533193103
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883463877892495438}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4, y: 4, z: 0}
+  m_Center: {x: 0.00000059604645, y: 2, z: 0}

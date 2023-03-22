@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 6650408560622117381}
   - component: {fileID: 3940659333922641786}
   - component: {fileID: 3835317907875087787}
+  - component: {fileID: 4775485238027095150}
   m_Layer: 0
   m_Name: BrickWindowLow
   m_TagString: Untagged
@@ -166,6 +167,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4775485238027095150
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6632028443597579468}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 4, z: 4}
+  m_Center: {x: -0.012164682, y: 2, z: 0}
 --- !u!1 &8109384892616008665
 GameObject:
   m_ObjectHideFlags: 0

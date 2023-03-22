@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2017284530096261099}
   - component: {fileID: 3193349016113399886}
   - component: {fileID: 843854606782479492}
+  - component: {fileID: 4031587985581252444}
   m_Layer: 0
   m_Name: GarageStairs 1
   m_TagString: Untagged
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &4031587985581252444
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203874226519874897}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4971730938994073495, guid: 5fa67ee9e8f86a54b8640620667306cc, type: 3}

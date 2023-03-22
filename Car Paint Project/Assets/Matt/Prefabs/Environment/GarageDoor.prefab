@@ -169,6 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4544930758181293099}
   - component: {fileID: 2462722631067220977}
+  - component: {fileID: 4138782723420121239}
   m_Layer: 0
   m_Name: Cube.007
   m_TagString: Untagged
@@ -259,6 +260,20 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.008615055, y: 1.8984334, z: 0.000000834465}
     m_Extent: {x: 0.03855586, y: 1.9201987, z: 1.634603}
   m_DirtyAABB: 0
+--- !u!64 &4138782723420121239
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195804202660852821}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!1 &1381367051801286416
 GameObject:
   m_ObjectHideFlags: 0
