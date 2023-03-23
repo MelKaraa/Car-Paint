@@ -15,7 +15,7 @@ public class Quest
 
     public Color[] colors = new Color[0];
 
-    public QuestGoal goal;
+    public QuestGoal[] goal;
 
     public void Complete()
     {
