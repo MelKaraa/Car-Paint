@@ -155,13 +155,18 @@ public class QuestSystem : MonoBehaviour
 
     public void CompleteRequest()
     {
-        //quests.reward *= 100;
+        float newReward = quests.reward / 100;
         float total = quests.goal[0].paintedNeeded + quests.goal[1].CleanedNeeded + quests.goal[2].AssembleNeeded;  
         float completed = quests.goal[0].paintedAmount + quests.goal[1].CleanedAmount + quests.goal[2].AssembledAmount;
         float percent = completed / total;
         percent *= 100f;
-        Debug.Log(percent);
-        quests.reward /= (int)percent;
-        GameManager.Money += quests.reward;
+        Debug.Log("Percent of total gained: " + percent);
+        newReward *= percent;
+        GameManager.Money += newReward;
+        Debug.Log("Money gained: " + newReward);
+
+        activeRequestUI.SetActive(false);
+        newRequestUI.SetActive(true);
+        reRolls = 3;
     }
 }

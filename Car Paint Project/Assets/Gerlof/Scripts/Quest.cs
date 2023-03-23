@@ -9,7 +9,7 @@ public class Quest
     public bool isActive;
     
     public string[] color;    
-    public int reward;
+    public float reward;
     public Image colorImage;
     public Image colorFill;
 
