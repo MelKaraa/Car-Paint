@@ -10,13 +10,7 @@ public class ActivateGrabRay : MonoBehaviour
 
     [SerializeField] XRDirectInteractorHandCheck leftDirectGrab;
     [SerializeField] XRDirectInteractorHandCheck rightDirectGrab;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         leftGrabRay.SetActive(leftDirectGrab.interactablesSelected.Count == 0);

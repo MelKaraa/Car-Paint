@@ -8,10 +8,18 @@ public class CarAssemble : MonoBehaviour
     [SerializeField] GameObject snapPos;
     [SerializeField] float snapDistance = 5f;
     public static bool canSnap;
+    public bool isPaintable;
+    private QuestSystem questSystem;
 
     private void Start()
     {
+        questSystem = GameObject.Find("GameManager").GetComponent<QuestSystem>();
         carPart = gameObject;
+        if (isPaintable)
+        {
+            questSystem.quests.goal[0].paintedNeeded++;
+        }
+        questSystem.quests.goal[2].AssembleNeeded++;
     }
     void Update()
     {

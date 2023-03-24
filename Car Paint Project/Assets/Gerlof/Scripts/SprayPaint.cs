@@ -2,71 +2,90 @@ using UnityEngine;
 
 public class SprayPaint : MonoBehaviour
 {
-    public Color paintColor;
-    public float paintAmount = 1.0f;
+    [Header("Settings")]
+    public Color[] colors = new Color[0];
     public float paintRadius = 0.1f;
 
-    private ParticleSystem ps;
-
+    public Mesh curMesh;
+    
+    [SerializeField]private int colorIndex;
+    private Vector3[] verts;
+    RaycastHit hit;
     void Start()
     {
-        ps = GetComponent<ParticleSystem>();
+        
     }
 
-    void OnParticleCollision(GameObject other)
+    private void Update()
     {
-        MeshCollider meshCollider = other.GetComponent<MeshCollider>();
-
-        if (meshCollider == null || !meshCollider.enabled)
-            return;
-
-        ParticleSystem.Particle[] particles = new ParticleSystem.Particle[ps.main.maxParticles];
-        int numParticles = ps.GetParticles(particles);
-
-        for (int i = 0; i < numParticles; i++)
+        
+        Ray ray = new Ray(transform.position, transform.forward);
+        if(Physics.Raycast(ray, out hit))
         {
-            Vector3 particlePosition = particles[i].position;
-            Vector3 particleDirection = particles[i].velocity.normalized;
-
-            RaycastHit hit;
-
-            if (meshCollider.Raycast(new Ray(particlePosition - particleDirection * 0.01f, particleDirection), out hit, paintRadius))
+          
+            if (hit.transform.GetComponent<MeshFilter>().GetComponent<Mesh>())
             {
-                Mesh mesh = hit.collider.GetComponent<MeshFilter>().mesh;
-
-                int[] triangles = mesh.triangles;
-                Vector3[] vertices = mesh.vertices;
-
-                int triangleIndex = hit.triangleIndex;
-
-                Vector3 p0 = vertices[triangles[triangleIndex * 3]];
-                Vector3 p1 = vertices[triangles[triangleIndex * 3 + 1]];
-                Vector3 p2 = vertices[triangles[triangleIndex * 3 + 2]];
-
-                Vector3 barycentricCoord = hit.barycentricCoordinate;
-
-                Vector3 hitPoint = p0 * barycentricCoord.x + p1 * barycentricCoord.y + p2 * barycentricCoord.z;
-
-                MeshRenderer meshRenderer = hit.collider.GetComponent<MeshRenderer>();
-
-                Texture2D tex = (Texture2D)meshRenderer.material.mainTexture;
-
-                Vector2 pixelUV = hit.textureCoord;
-
-                pixelUV.x *= tex.width;
-                pixelUV.y *= tex.height;
-
-                Color[] colors = tex.GetPixels(Mathf.FloorToInt(pixelUV.x - paintRadius), Mathf.FloorToInt(pixelUV.y - paintRadius), Mathf.CeilToInt(paintRadius * 2), Mathf.CeilToInt(paintRadius * 2));
-
-                for (int j = 0; j < colors.Length; j++)
+                curMesh = hit.transform.GetComponent<MeshFilter>().GetComponent<Mesh>();
+                verts = curMesh.vertices;
+                if (PaintPlayer.spray)
                 {
-                    colors[j] = Color.Lerp(colors[j], paintColor, paintAmount);
+                    PaintCar(curMesh, hit.triangleIndex, colors[colorIndex]);
                 }
+            }
+            else
+            {
+                Debug.Log("No mesh found");
+                curMesh = hit.transform.GetComponent<MeshFilter>().GetComponent<Mesh>();
+            }
+            
+        }
+    }
 
-                tex.SetPixels(Mathf.FloorToInt(pixelUV.x - paintRadius), Mathf.FloorToInt(pixelUV.y - paintRadius), Mathf.CeilToInt(paintRadius * 2), Mathf.CeilToInt(paintRadius * 2), colors);
+    void PaintCar(Mesh mesh, int i, Color color)
+    {
+        Vector3[] vertices = mesh.vertices;
+        Color[] colors = new Color[0];
 
-                tex.Apply();
+        if (mesh.colors.Length > 0)
+        {
+            colors = mesh.colors;
+        }
+        else
+        {
+            colors = new Color[vertices.Length];
+        }
+
+        int[] triangles = mesh.triangles;
+        for (int t = 0; t < triangles.Length; t++)
+        {
+            if (triangles[t] == i) // closest vertex i
+            {
+                int subIndex = t % 3;
+                if (subIndex == 0)
+                {
+                    // apply color to t+1 & t+2
+                    colors[t + 1] = color;
+                    colors[t + 2] = color;
+                }
+                else if (subIndex == 1)
+                {
+                    // apply color to t-1 and t+1
+                    colors[t - 1] = color;
+                    colors[t + 1] = color;
+                }
+                else
+                {
+                    // apply color to t-2 & t-1
+                    colors[t - 2] = color;
+                    colors[t - 1] = color;
+                }
             }
         }
+        mesh.colors = colors;
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(transform.position, hit.point);
     }
 }
