@@ -8,12 +8,7 @@ public class SprayPaint : MonoBehaviour
     public Mesh curMesh;
     
     [SerializeField]private int colorIndex;
-    private Vector3[] verts;
     RaycastHit hit;
-    void Start()
-    {
-        
-    }
 
     private void Update()
     {
@@ -26,7 +21,6 @@ public class SprayPaint : MonoBehaviour
             if (mesh)
             {
                 curMesh = mesh;
-                verts = curMesh.vertices;
                 if (PaintPlayer.spray)
                 {
                     PaintCar(curMesh, hit.triangleIndex, colors[colorIndex]);
@@ -34,8 +28,7 @@ public class SprayPaint : MonoBehaviour
             }
             else
             {
-                Debug.Log("No mesh found");
-                curMesh = hit.transform.GetComponent<MeshFilter>().GetComponent<Mesh>();
+                Debug.Log("No mesh found, check if the Read/Write is enabled!");
             }
             
         }
