@@ -11,8 +11,7 @@ public class SprayPaint : MonoBehaviour
     RaycastHit hit;
 
     private void Update()
-    {
-        
+    {       
         Ray ray = new Ray(transform.position, transform.forward);
         if(Physics.Raycast(ray, out hit))
         {
