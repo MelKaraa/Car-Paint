@@ -4,20 +4,26 @@ ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable:
   - first:
-      74: 2359108123092434194
-    second: Dore|Close
+      74: -5935193851620174113
+    second: Door|1 Closed
   - first:
-      74: -1659132531883557439
-    second: Dore|Cube.007Action
+      74: -6579587554728700951
+    second: Door|2 Open
   - first:
-      74: -129170053859783374
-    second: Dore|DoreAction
+      74: 8057566827324632378
+    second: Door|Dore|Dore|Cube.007Action|Dore|Cube.007Action
   - first:
-      74: -8459269557615455567
-    second: Dore|DoreAction.001
+      74: -3022867484160375999
+    second: Door|Dore|Dore|DoreAction|Dore|DoreAction
   - first:
-      74: -5280784820030355037
-    second: Dore|OPen
+      74: -7360048985616938772
+    second: Door|Move
+  - first:
+      74: 1447283161327014503
+    second: Door|Closed.001
+  - first:
+      74: 2749178469300657946
+    second: Door|Open
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -46,36 +52,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Dore|DoreAction.001
-      takeName: Dore|DoreAction.001
-      internalID: 0
-      firstFrame: 7.1
-      lastFrame: 11.55
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []
