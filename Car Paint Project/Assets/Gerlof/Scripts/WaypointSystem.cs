@@ -23,7 +23,7 @@ public class WaypointSystem : MonoBehaviour
         {
             GetNextWaypoint();
         }
-        transform.LookAt(target);
+        
     }
 
     void GetNextWaypoint()
@@ -36,6 +36,7 @@ public class WaypointSystem : MonoBehaviour
 
         waypointindex++;
         target = Waypoints.points[waypointindex];
+        transform.LookAt(target);
     }
 
     void EndPath()
