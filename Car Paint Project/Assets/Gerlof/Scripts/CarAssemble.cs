@@ -10,8 +10,9 @@ public class CarAssemble : MonoBehaviour
     public static bool canSnap;
     public bool isPaintable;
     private QuestSystem questSystem;
+    [SerializeField] bool isSnapped;
 
-    private void Start()
+    private void Awake()
     {
         questSystem = GameObject.Find("GameManager").GetComponent<QuestSystem>();
         carPart = gameObject;
@@ -25,8 +26,25 @@ public class CarAssemble : MonoBehaviour
     {
         if(Vector3.Distance(carPart.transform.position, snapPos.transform.position) < snapDistance && canSnap)
         {
-            carPart.transform.position = snapPos.transform.position;
-            carPart.transform.rotation = snapPos.transform.rotation;
+            if(!isSnapped)
+            {
+                Snap();
+                isSnapped = true;
+            }
+            
         }
+        else
+        {
+            questSystem.quests.goal[2].AssembledAmount--;
+            canSnap = true;
+        }
+    }
+
+    void Snap()
+    {
+        carPart.transform.position = snapPos.transform.position;
+        carPart.transform.rotation = snapPos.transform.rotation;
+        questSystem.quests.goal[2].AssembledAmount++;
+        canSnap = false;
     }
 }

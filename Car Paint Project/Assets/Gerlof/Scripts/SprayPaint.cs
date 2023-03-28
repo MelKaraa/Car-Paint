@@ -3,30 +3,23 @@ using UnityEngine;
 public class SprayPaint : MonoBehaviour
 {
     [Header("Settings")]
-    public Color[] colors = new Color[0];
-    public float paintRadius = 0.1f;
+    public Color[] colors;
 
     public Mesh curMesh;
     
     [SerializeField]private int colorIndex;
-    private Vector3[] verts;
     RaycastHit hit;
-    void Start()
-    {
-        
-    }
 
     private void Update()
-    {
-        
+    {       
         Ray ray = new Ray(transform.position, transform.forward);
         if(Physics.Raycast(ray, out hit))
         {
-          
-            if (hit.transform.GetComponent<MeshFilter>().GetComponent<Mesh>())
+
+            Mesh mesh = hit.transform.GetComponent<MeshFilter>().mesh;
+            if (mesh)
             {
-                curMesh = hit.transform.GetComponent<MeshFilter>().GetComponent<Mesh>();
-                verts = curMesh.vertices;
+                curMesh = mesh;
                 if (PaintPlayer.spray)
                 {
                     PaintCar(curMesh, hit.triangleIndex, colors[colorIndex]);
@@ -34,32 +27,42 @@ public class SprayPaint : MonoBehaviour
             }
             else
             {
-                Debug.Log("No mesh found");
-                curMesh = hit.transform.GetComponent<MeshFilter>().GetComponent<Mesh>();
+                Debug.Log("No mesh found, check if the Read/Write is enabled!");
             }
             
         }
     }
 
-    void PaintCar(Mesh mesh, int i, Color color)
+    public void PaintCar(Mesh mesh, int i, Color color)
     {
         Vector3[] vertices = mesh.vertices;
-        Color[] colors = new Color[0];
+        Color[] colors = mesh.colors;
 
-        if (mesh.colors.Length > 0)
-        {
-            colors = mesh.colors;
-        }
-        else
+        Debug.Log(colors.Length);
+
+        if (colors.Length < 1)
         {
             colors = new Color[vertices.Length];
+            for (int j = 0; j < colors.Length; j++)
+            {
+                colors[j] = Color.blue;
+            }
         }
+
+        //Color[] colors = new Color[vertices.Length];
+
+
 
         int[] triangles = mesh.triangles;
         for (int t = 0; t < triangles.Length; t++)
         {
             if (triangles[t] == i) // closest vertex i
             {
+
+                Debug.Log("Colors: " + colors.Length + ", t: " + t);
+                //Debug.Log("t:" + t);
+                //Debug.Log(colors[t]);
+
                 int subIndex = t % 3;
                 if (subIndex == 0)
                 {
@@ -82,7 +85,7 @@ public class SprayPaint : MonoBehaviour
             }
         }
         mesh.colors = colors;
-    }
+    }              
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
