@@ -2426,6 +2426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waypointindex: 0
   movementSpeed: 2
+  rotationSpeed: 1
   door1: {fileID: 1951388327}
   door2: {fileID: 1172419011}
   end: 0
