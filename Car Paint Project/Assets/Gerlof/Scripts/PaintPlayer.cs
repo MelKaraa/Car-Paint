@@ -10,11 +10,15 @@ public class PaintPlayer : MonoBehaviour
     [SerializeField] float ammoUseMultiplier;
     public static bool spray;
     [SerializeField] Material paintFill;
+    [SerializeField] GameObject glass;
+    Renderer rend;
 
     float moneyPercent;
     public void Spray()
     {
         spray = !spray;
+        rend = glass.GetComponent<Renderer>();
+        paintFill = rend.material;
     }
 
     private void Update()
