@@ -9,9 +9,9 @@ public class PaintPlayer : MonoBehaviour
     [SerializeField] float ammoAddMultiplier;
     [SerializeField] float ammoUseMultiplier;
     public static bool spray;
+    [SerializeField] Material paintFill;
 
-    [SerializeField] TMP_Text ammoTxt;
-
+    float moneyPercent;
     public void Spray()
     {
         spray = !spray;
@@ -19,16 +19,20 @@ public class PaintPlayer : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.Money <= 0)
-        {
-            ammoTxt.text = "Money: 0";
-            return;
-        }
+        float singlePer = GameManager.Money / 100;
+        float total = 1000f;
+        float current = GameManager.Money;
+        float percent = current / total;
+        percent *= 100f;
+        moneyPercent = singlePer *= percent;
+        moneyPercent /= 500f;
+        moneyPercent /= 7f;
+        //Debug.Log(moneyPercent.ToString());
         if (spray)
         {
+            paintFill.SetFloat("_Fill", moneyPercent);
             paintParticle.Emit(300);
             GameManager.Money -= ammoUseMultiplier * Time.deltaTime;
-            ammoTxt.text = "Money: " + GameManager.Money.ToString("F0");
         }
         else
         {

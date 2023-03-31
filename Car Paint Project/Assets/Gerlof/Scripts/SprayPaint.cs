@@ -3,6 +3,7 @@ using UnityEngine;
 public class SprayPaint : MonoBehaviour
 {
     [Header("Settings")]
+    [SerializeField] Transform shootPos;
     public Color[] colors;
 
     public Mesh curMesh;
@@ -12,7 +13,7 @@ public class SprayPaint : MonoBehaviour
 
     private void Update()
     {       
-        Ray ray = new Ray(transform.position, transform.forward);
+        Ray ray = new Ray(shootPos.position, transform.forward);
         if(Physics.Raycast(ray, out hit))
         {
 
@@ -63,7 +64,7 @@ public class SprayPaint : MonoBehaviour
                 //Debug.Log("t:" + t);
                 //Debug.Log(colors[t]);
 
-                int subIndex = t % 3;
+                int subIndex = t % 3;   
                 if (subIndex == 0)
                 {
                     // apply color to t+1 & t+2

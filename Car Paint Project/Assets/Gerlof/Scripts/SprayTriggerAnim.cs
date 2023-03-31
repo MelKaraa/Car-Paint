@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class SprayTriggerAnim : MonoBehaviour
 {
     [SerializeField] InputActionProperty trigger;
-    [SerializeField] Animator triggerAnimator;
+    Animator triggerAnimator;
     // Start is called before the first frame update
     void Start()
     {
