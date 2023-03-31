@@ -12,15 +12,30 @@ public class StefanSpray : MonoBehaviour
     public float paintDstTreshold;
     public LayerMask whatIsPaintable;
     [SerializeField] private int colorIndex;
-    // Start is called before the first frame update
-    void Start()
+
+    Mesh CloneMesh(Mesh aMat)
     {
-        
+        return Instantiate(aMat);
+    }
+    void Awake()
+    {
+        MeshFilter[] filters = FindObjectsOfType<MeshFilter>();
+        for (int i = 0; i < filters.Length; i++)
+        {
+            if (filters[i].gameObject.layer != LayerMask.NameToLayer("Paint")) continue; // ==> Verander paintable naar de naam van je paint layer
+
+            var mesh = filters[i].sharedMesh;
+
+            mesh = CloneMesh(mesh);
+            mesh.name = mesh.name + filters[i].transform.name;
+
+            filters[i].sharedMesh = mesh;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
+
         if (PaintPlayer.spray)
         {
             // ==> Raycast vanuit de spray painter

@@ -23,6 +23,7 @@ public class PaintPlayer : MonoBehaviour
 
     private void Update()
     {
+        //paintFill.color = 
         float singlePer = GameManager.Money / 100;
         float total = 1000f;
         float current = GameManager.Money;
