@@ -38,6 +38,8 @@ public class QuestSystem : MonoBehaviour
     [SerializeField] Image cleanUX;
     [SerializeField] Image assembleUX;
     bool Goalsreached;
+    [SerializeField] WaypointSystem waypointSystem;
+    [SerializeField] CarSpawner carSpawner;
     
     private void Start()
     {
@@ -127,6 +129,9 @@ public class QuestSystem : MonoBehaviour
         colorImage.color = quests.colors[colorIndex];
         colorFill.color = quests.colors[colorIndex];
         activeRequestUI.SetActive(true);
+
+        carSpawner.SpawnCar();
+        waypointSystem = CarSpawner.currentCar.GetComponent<WaypointSystem>();
     }
 
     public void PaintCarPart()
@@ -164,6 +169,9 @@ public class QuestSystem : MonoBehaviour
         newReward *= percent;
         GameManager.Money += newReward;
         Debug.Log("Money gained: " + newReward);
+
+        waypointSystem.end = true;
+        
 
         activeRequestUI.SetActive(false);
         newRequestUI.SetActive(true);
