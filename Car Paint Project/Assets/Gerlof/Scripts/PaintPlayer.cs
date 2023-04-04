@@ -19,9 +19,10 @@ public class PaintPlayer : MonoBehaviour
     public void Spray()
     {
         spray = !spray;
-        rend = glass.GetComponent<Renderer>();
-        paintFill = rend.material;
-        paintFill.color = colors[QuestSystem.colorIndex];
+        //rend = glass.GetComponent<Renderer>();
+        //paintFill = rend.material;
+        paintFill.SetColor("_LiquidColor", colors[QuestSystem.colorIndex]);
+        //paintFill.color = colors[QuestSystem.colorIndex];
     }
 
     private void Update()

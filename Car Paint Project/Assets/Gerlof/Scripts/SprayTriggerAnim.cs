@@ -6,6 +6,7 @@ public class SprayTriggerAnim : MonoBehaviour
 {
     [SerializeField] InputActionProperty trigger;
     Animator triggerAnimator;
+    bool isHeld;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +16,15 @@ public class SprayTriggerAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float triggerValue = trigger.action.ReadValue<float>();
-        triggerAnimator.SetFloat("Trigger", triggerValue);
+        if(isHeld)
+        {
+            float triggerValue = trigger.action.ReadValue<float>();
+            triggerAnimator.SetFloat("Trigger", triggerValue);
+        }
+        
+    }
+    public void DoAnim()
+    {
+        isHeld = !isHeld;
     }
 }
