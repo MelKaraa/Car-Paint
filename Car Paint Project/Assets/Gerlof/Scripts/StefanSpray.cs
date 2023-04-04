@@ -11,7 +11,6 @@ public class StefanSpray : MonoBehaviour
 
     public float paintDstTreshold;
     public LayerMask whatIsPaintable;
-    [SerializeField] private int colorIndex;
 
     Mesh CloneMesh(Mesh aMat)
     {
@@ -83,7 +82,7 @@ public class StefanSpray : MonoBehaviour
                             {
                                 // ==> de intensiteit van het sprayen wordt bepaalt op basis van de spray zone
                                 float factor = Mathf.InverseLerp(0, paintDstTreshold, dst);
-                                colors[i] = Color.Lerp(colors[i], this.colors[colorIndex], progressSpeed * factor * Time.fixedDeltaTime); // ==> lerpen gebruiken om het smooth te painter
+                                colors[i] = Color.Lerp(colors[i], this.colors[QuestSystem.colorIndex], progressSpeed * factor * Time.fixedDeltaTime); // ==> lerpen gebruiken om het smooth te painter
                             }
                         }
 

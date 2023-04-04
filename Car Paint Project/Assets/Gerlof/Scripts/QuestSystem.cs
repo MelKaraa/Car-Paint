@@ -28,7 +28,7 @@ public class QuestSystem : MonoBehaviour
     [SerializeField] Image colorImage;
     [SerializeField] Image colorFill;
     
-    int colorIndex;
+    public static int colorIndex;
 
     [Header("Completed Goals")]
     [SerializeField] bool PaintDone;

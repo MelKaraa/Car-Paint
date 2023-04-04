@@ -13,17 +13,20 @@ public class PaintPlayer : MonoBehaviour
     [SerializeField] GameObject glass;
     Renderer rend;
 
+    public Color[] colors;
+
     float moneyPercent;
     public void Spray()
     {
         spray = !spray;
         rend = glass.GetComponent<Renderer>();
         paintFill = rend.material;
+        paintFill.color = colors[QuestSystem.colorIndex];
     }
 
     private void Update()
     {
-        //paintFill.color = 
+        
         float singlePer = GameManager.Money / 100;
         float total = 1000f;
         float current = GameManager.Money;

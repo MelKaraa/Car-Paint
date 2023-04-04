@@ -8,7 +8,6 @@ public class SprayPaint : MonoBehaviour
 
     public Mesh curMesh;
     
-    [SerializeField]private int colorIndex;
     RaycastHit hit;
 
     private void Update()
@@ -23,7 +22,7 @@ public class SprayPaint : MonoBehaviour
                 curMesh = mesh;
                 if (PaintPlayer.spray)
                 {
-                    PaintCar(curMesh, hit.triangleIndex, colors[colorIndex]);
+                    PaintCar(curMesh, hit.triangleIndex, colors[QuestSystem.colorIndex]);
                 }
             }
             else
@@ -90,6 +89,6 @@ public class SprayPaint : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawRay(transform.position, hit.point);
+        Gizmos.DrawRay(shootPos.position, hit.point);
     }
 }
