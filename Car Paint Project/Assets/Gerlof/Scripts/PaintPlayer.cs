@@ -11,7 +11,6 @@ public class PaintPlayer : MonoBehaviour
     public static bool spray;
     [SerializeField] Material paintFill;
     [SerializeField] GameObject glass;
-    Renderer rend;
 
     public Color[] colors;
 
@@ -19,10 +18,6 @@ public class PaintPlayer : MonoBehaviour
     public void Spray()
     {
         spray = !spray;
-        //rend = glass.GetComponent<Renderer>();
-        //paintFill = rend.material;
-        paintFill.SetColor("_LiquidColor", colors[QuestSystem.colorIndex]);
-        //paintFill.color = colors[QuestSystem.colorIndex];
     }
 
     private void Update()
@@ -40,7 +35,7 @@ public class PaintPlayer : MonoBehaviour
         if (spray)
         {
             paintFill.SetFloat("_Fill", moneyPercent);
-            paintParticle.Emit(300);
+            paintParticle.Emit(200);
             GameManager.Money -= ammoUseMultiplier * Time.deltaTime;
         }
         else

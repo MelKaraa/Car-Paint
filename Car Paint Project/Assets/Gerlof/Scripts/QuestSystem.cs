@@ -27,6 +27,10 @@ public class QuestSystem : MonoBehaviour
     [SerializeField] TMP_Text activeColorTxt;
     [SerializeField] Image colorImage;
     [SerializeField] Image colorFill;
+    [SerializeField] GameObject glassFill;
+    [SerializeField] GameObject sprayParticle;
+    Renderer sprayRend;
+    Renderer rend;
     
     public static int colorIndex;
 
@@ -52,7 +56,7 @@ public class QuestSystem : MonoBehaviour
 
     private void Update()
     {
-        money.text = "Money: " + GameManager.Money;
+        money.text = "Money: " + GameManager.Money.ToString("f0");
         if(PaintDone && CleanDone && AssembleDone && !Goalsreached)
         {
             Goalsreached = true;
@@ -101,6 +105,9 @@ public class QuestSystem : MonoBehaviour
     }
     public void OpenRequest()
     {
+        quests.goal[0].paintedNeeded = 0;
+        quests.goal[1].CleanedNeeded = 0;
+        quests.goal[2].AssembleNeeded = 0;
         if (reRolls <= 0)
         {
             noReRollsUI.SetActive(true);
@@ -132,6 +139,11 @@ public class QuestSystem : MonoBehaviour
 
         carSpawner.SpawnCar();
         waypointSystem = CarSpawner.currentCar.GetComponent<WaypointSystem>();
+        rend = glassFill.GetComponent<Renderer>();
+        rend.material.SetColor("_LiquidColor", quests.colors[QuestSystem.colorIndex]);
+        rend.material.SetColor("_SurfaceColor", quests.colors[QuestSystem.colorIndex]);
+        sprayRend = sprayParticle.GetComponent<Renderer>();
+        sprayRend.material.color = quests.colors[QuestSystem.colorIndex];
     }
 
     public void PaintCarPart()

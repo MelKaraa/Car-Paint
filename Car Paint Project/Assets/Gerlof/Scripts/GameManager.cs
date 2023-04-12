@@ -27,6 +27,6 @@ public class GameManager : MonoBehaviour
         {
             GameOver = true;
         }
-        moneyTxt.text = Money.ToString();
+        moneyTxt.text = Money.ToString("f0");
     }
 }
