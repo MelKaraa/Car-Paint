@@ -14,6 +14,8 @@ public class WaypointSystem : MonoBehaviour
     public bool end;
     [SerializeField] bool shopEntered;
 
+    [SerializeField] GameManager gameManager;
+
     public float rotationDuration = 1f;  // The duration of the rotation
 
     private Quaternion startingRotation;  // The starting rotation of the object
@@ -53,6 +55,9 @@ public class WaypointSystem : MonoBehaviour
             else if (waypointindex == 4 && shopEntered)
             {
                 door2.SetTrigger("DoorMove");
+            }
+            else if(waypointindex == Waypoints.points.Length) {
+                gameManager.ReloadScene();
             }
 
             GetNextWaypoint();
