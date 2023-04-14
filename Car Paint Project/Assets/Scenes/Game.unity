@@ -2322,10 +2322,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1512784584, guid: 0ad581052ee3a1a46a8d1d16b60576a9, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 9472
+      objectReference: {fileID: 0}
     - target: {fileID: 1512784586, guid: 0ad581052ee3a1a46a8d1d16b60576a9, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 1983891165, guid: 0ad581052ee3a1a46a8d1d16b60576a9, type: 3}
       propertyPath: progressSpeed
       value: 3.54
@@ -16409,14 +16413,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386557332152413067}
-  m_LocalRotation: {x: -0, y: -0, z: 0.70710576, w: 0.70710784}
-  m_LocalPosition: {x: -14.4, y: 0.115, z: -0.62}
+  m_LocalRotation: {x: -0.70710766, y: 0.70710593, z: 0.00011590868, w: 0.000115700066}
+  m_LocalPosition: {x: -14.4, y: 0.115, z: 1.588}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1683625454}
   m_RootOrder: 121
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+  m_LocalEulerAnglesHint: {x: -179.981, y: 0, z: 90}
 --- !u!4 &1762554662472755850
 Transform:
   m_ObjectHideFlags: 0
@@ -16424,14 +16428,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1386557332012789808}
-  m_LocalRotation: {x: -0, y: -0, z: 0.25881857, w: 0.965926}
-  m_LocalPosition: {x: -14.959, y: 0.377, z: -1.949}
+  m_LocalRotation: {x: -0.13052595, y: 0.99144495, z: 0.0000017254924, w: 0.0000022771894}
+  m_LocalPosition: {x: -15.09, y: 0.377, z: -1.949}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 166789443}
   m_RootOrder: 17
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: -15}
 --- !u!4 &1762554664066563989
 Transform:
   m_ObjectHideFlags: 0
@@ -43854,6 +43858,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 2.958
+      objectReference: {fileID: 0}
+    - target: {fileID: 5906828298951223926, guid: 2544931c71d124840b26284a699e929a,
+        type: 3}
+      propertyPath: reRolls
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5906828298951223926, guid: 2544931c71d124840b26284a699e929a,
         type: 3}
