@@ -182,7 +182,7 @@ public class QuestSystem : MonoBehaviour
         GameManager.Money += newReward;
         Debug.Log("Money gained: " + newReward);
 
-        waypointSystem.end = true;
+        waypointSystem.end = false;
         
 
         activeRequestUI.SetActive(false);

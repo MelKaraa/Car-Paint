@@ -632,7 +632,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 10000
+    maxNumParticles: 9472
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -5238,10 +5238,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5539704517125064115}
+        m_TargetAssemblyTypeName: SprayTriggerAnim, Assembly-CSharp
+        m_MethodName: DoAnim
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5539704517125064115}
+        m_TargetAssemblyTypeName: SprayTriggerAnim, Assembly-CSharp
+        m_MethodName: DoAnim
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls:
@@ -5361,7 +5385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paintParticle: {fileID: 1512784584}
   ammoAddMultiplier: 10
-  ammoUseMultiplier: 2
+  ammoUseMultiplier: 5
   paintFill: {fileID: 2100000, guid: f27baee51fa295d44b9cb725f487c5aa, type: 2}
   glass: {fileID: 4135634843021514225}
   colors:
@@ -5433,8 +5457,8 @@ MonoBehaviour:
   - {r: 0.92129517, g: 0, b: 1, a: 1}
   - {r: 0.5744529, g: 0, b: 1, a: 1}
   - {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 1}
-  progressSpeed: 4
-  paintDstTreshold: 0.3
+  progressSpeed: 5
+  paintDstTreshold: 0.4
   whatIsPaintable:
     serializedVersion: 2
     m_Bits: 512

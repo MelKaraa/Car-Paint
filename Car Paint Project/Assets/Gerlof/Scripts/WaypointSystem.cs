@@ -61,7 +61,8 @@ public class WaypointSystem : MonoBehaviour
             {
                 door2.SetTrigger("DoorMove");
             }
-            else if(waypointindex == Waypoints.points.Length) {
+            else if(waypointindex == Waypoints.points.Length-1) {
+                Destroy(gameObject);
                 gameManager.ReloadScene();
             }
             GetNextWaypoint();   

@@ -297,7 +297,7 @@ GameObject:
   m_Layer: 0
   m_Name: Checkpoint3
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -843,7 +843,7 @@ GameObject:
   m_Layer: 0
   m_Name: Checkpoint2
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1370,7 +1370,7 @@ GameObject:
   m_Layer: 0
   m_Name: Checkpoint6
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -2322,27 +2322,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1512784584, guid: 0ad581052ee3a1a46a8d1d16b60576a9, type: 3}
-      propertyPath: InitialModule.maxNumParticles
-      value: 9472
-      objectReference: {fileID: 0}
-    - target: {fileID: 1512784586, guid: 0ad581052ee3a1a46a8d1d16b60576a9, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-    - target: {fileID: 1983891165, guid: 0ad581052ee3a1a46a8d1d16b60576a9, type: 3}
-      propertyPath: progressSpeed
-      value: 3.54
-      objectReference: {fileID: 0}
-    - target: {fileID: 1983891165, guid: 0ad581052ee3a1a46a8d1d16b60576a9, type: 3}
-      propertyPath: paintDstTreshold
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1175827020804843998, guid: 0ad581052ee3a1a46a8d1d16b60576a9,
-        type: 3}
-      propertyPath: ammoUseMultiplier
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 3616224846202074805, guid: 0ad581052ee3a1a46a8d1d16b60576a9,
         type: 3}
       propertyPath: m_RootOrder
@@ -4390,7 +4369,7 @@ GameObject:
   m_Layer: 0
   m_Name: Checkpoint4
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4421,7 +4400,7 @@ GameObject:
   m_Layer: 0
   m_Name: Checkpoint1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4452,7 +4431,7 @@ GameObject:
   m_Layer: 0
   m_Name: Checkpoint5
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -4737,7 +4716,7 @@ GameObject:
   m_Layer: 0
   m_Name: Checkpoint0
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -28178,7 +28157,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3841569341895912722}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
@@ -28327,7 +28306,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3841569341895912722}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 580556627acdd10478a4b5a0f15fb582, type: 3}
   m_Name: 
