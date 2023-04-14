@@ -24,6 +24,7 @@ public class WaypointSystem : MonoBehaviour
 
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         target = Waypoints.points[0];
         end = false;
         shopEntered = false;
@@ -56,12 +57,14 @@ public class WaypointSystem : MonoBehaviour
             {
                 door2.SetTrigger("DoorMove");
             }
+            else if(waypointindex == 5 && shopEntered)
+            {
+                door2.SetTrigger("DoorMove");
+            }
             else if(waypointindex == Waypoints.points.Length) {
                 gameManager.ReloadScene();
             }
-
-            GetNextWaypoint();
-            
+            GetNextWaypoint();   
         }
         Vector3 direction = target.position - transform.position;
         targetRotation = Quaternion.LookRotation(direction, Vector3.up);
@@ -79,7 +82,6 @@ public class WaypointSystem : MonoBehaviour
     {
         if (waypointindex >= Waypoints.points.Length - 1)
         {
-            ExitShop();
             end = true;
         }
         if (end)
@@ -98,13 +100,5 @@ public class WaypointSystem : MonoBehaviour
             shopEntered = true;
             end = true;
         }
-        
     }
-
-    void ExitShop()
-    {
-        if(!end)
-        door2.SetTrigger("DoorMove");
-    }
-
 }
